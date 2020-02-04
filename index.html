@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kryptere og HASHing</title>
+	<meta charset="utf-8">
+	<script src="script.js"></script>
+
+	<script src="rollups/md5.js"></script>
+  	<script src="rollups/sha1.js"></script>
+  	<script src="rollups/sha3.js"></script>
+  	<script src="rollups/sha256.js"></script>
+
+  	<script src="rollups/aes.js"></script>
+  	<script src="rollups/tripledes.js"></script>
+  	<script src="rollups/rabbit.js"></script>
+</head>
+<body>
+	<h1>På denne side skal vi kryptere og dekryptere</h1>
+	<form>
+		<input id="text" type="text" name="text" placeholder="Write text here">
+		<select id="hashing">
+			<option selected="selected">Vælg Hashing metode</option>
+			<option value="0">MD5</option>
+			<option value="1">SHA1</option>
+			<option value="2">SHA3</option>
+			<option value="3">SHA256</option>
+		</select>
+		<select id="crypt">
+			<option selected="selected">Vælg Hashing metode</option>
+			<option value="2">AES</option>
+			<option value="1">Triple DES</option>
+			<option value="0">Rabbit</option>
+		</select>
+		<input type="button" id="krypter" name="submit" value="krypter"></input>
+		<input type="button" id="dekrypter" name="submit" value="dekrypter"></input>
+	</form>
+	<br>
+	<label>hash</label>
+	<div id="hash"></div>
+	<br>
+	<label>krypteret</label>
+	<div id="krypteret"></div>
+	<br>
+	<label>dekrypteret</label>
+	<div id="dekrypteret"></div>
+</body>
+</html>
